@@ -36,6 +36,40 @@ namespace Sorting
             selectionSorter.SortNumbers(ref numArray2);
             Console.WriteLine("After Selection Sort");
             PrintArray(numArray2);
+
+            int[] numArray3 = { 89, 76, 45, 92, 67, 12, 99 };
+            ISortAlgorithm mergeSorter = new MergeSortAlgorithm();
+            Console.WriteLine("Before Merge Sort");
+            PrintArray(numArray3);
+            mergeSorter.SortNumbers(ref numArray3);
+            Console.WriteLine("After Merge Sort");
+            PrintArray(numArray3);
+
+            int[] numArray4 = { 89, 76, 45, 92, 67, 12, 99 };
+            ISortAlgorithm quickSorter = new QuickSortAlgorithm();
+            Console.WriteLine("Before Quick Sort");
+            PrintArray(numArray4);
+            quickSorter.SortNumbers(ref numArray4);
+            Console.WriteLine("After Quick Sort");
+            PrintArray(numArray4);
+
+            int[] numArrayCountSort = { 99, 1, 36, 0, 32, 9, 89 };
+            ISortAlgorithm countSorter = new CountingSortAlgorithm();
+            Console.WriteLine("Before Count Sort");
+            PrintArray(numArrayCountSort);
+            countSorter.SortNumbers(ref numArrayCountSort);
+            Console.WriteLine("After Count Sort");
+            PrintArray(numArrayCountSort);
+
+            int[] numArrayBucketSort = { 99, 1, 36, 5, 32, 9, 89 };
+            ISortAlgorithm bucketSorter = new BucketSortAlgorithm();
+            Console.WriteLine("Before Bucket Sort");
+            PrintArray(numArrayBucketSort);
+            bucketSorter.SortNumbers(ref numArrayBucketSort);
+            Console.WriteLine("After Bucket Sort");
+            PrintArray(numArrayBucketSort);
+
+            Console.ReadLine();
         }
 
         public static void PrintArray (int[] numArray)
