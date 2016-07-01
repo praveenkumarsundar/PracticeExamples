@@ -69,9 +69,53 @@ namespace Sorting
             Console.WriteLine("After Bucket Sort");
             PrintArray(numArrayBucketSort);
 
+            CountInversionInMergeSort();
             Console.ReadLine();
         }
 
+        public static void CountInversionInMergeSort()
+        {
+            MergeSortAlgorithmWithCountInv mergeSorter = new MergeSortAlgorithmWithCountInv();
+            int numOfInversions = 0;
+            
+             Console.WriteLine("CountInversion In Merge Sort");
+            int[] numArray = { 100, 89, 69, 49, 39, 15, 1 };
+            Console.WriteLine("Before Merge Sort");
+            PrintArray(numArray);
+            mergeSorter.SortNumbers(ref numArray, ref numOfInversions);
+            Console.WriteLine("After Merge Sort");
+            PrintArray(numArray);
+            Console.WriteLine("Num Of Inversions:" + numOfInversions);
+
+            
+
+            int[] numArray1 = { 1, 16, 35, 25, 65, 85, 99 };
+            numOfInversions = 0;
+            Console.WriteLine("Before Merge Sort");
+            PrintArray(numArray1);
+            mergeSorter.SortNumbers(ref numArray1, ref numOfInversions);
+            Console.WriteLine("After Merge Sort");
+            PrintArray(numArray1);
+            Console.WriteLine("Num Of Inversions:" + numOfInversions);
+
+            int[] numArray2 = { 99, 1, 36, 0, 32, 9, 89 };
+            numOfInversions = 0;
+            Console.WriteLine("Before Merge Sort");
+            PrintArray(numArray2);
+            mergeSorter.SortNumbers(ref numArray2, ref numOfInversions);
+            Console.WriteLine("After Merge Sort");
+            PrintArray(numArray2);
+            Console.WriteLine("Num Of Inversions:" + numOfInversions);
+
+            int[] numArray3 = { 89, 76, 45, 92, 67, 12, 99 };
+            numOfInversions = 0;
+            Console.WriteLine("Before Merge Sort");
+            PrintArray(numArray3);
+            mergeSorter.SortNumbers(ref numArray3, ref numOfInversions);
+            Console.WriteLine("After Merge Sort");
+            PrintArray(numArray3);
+            Console.WriteLine("Num Of Inversions:" + numOfInversions);
+        }
         public static void PrintArray (int[] numArray)
         {
             for (int i = 0; i < numArray.Length; i++)
